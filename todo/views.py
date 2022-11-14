@@ -8,6 +8,7 @@ from todo.models import Tag, Task
 class IndexListView(generic.ListView):
     model = Task
     template_name = "todo/index.html"
+    paginate_by = 3
 
 
 class IndexCreateView(generic.CreateView):
