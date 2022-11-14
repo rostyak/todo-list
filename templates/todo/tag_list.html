@@ -21,12 +21,12 @@
         <tr>
           <td>{{ tag.name }}</td>
           <td>
-            <a class="btn btn-dark" href="{% url 'todo:tag-list' %}"> {# pk=tag.id #}
+            <a class="btn btn-dark" href="{% url 'todo:tag-update' pk=tag.id %}">
               Update
             </a>
           </td>
           <td>
-            <a class="btn btn-dark" href="{% url 'todo:tag-list' %}"> {# pk=tag.id #}
+            <a class="btn btn-dark" href="{% url 'todo:tag-delete' pk=tag.id %}">
               Delete
             </a>
           </td>
