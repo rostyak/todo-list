@@ -16,7 +16,7 @@ class Task(models.Model):
     tags = models.ManyToManyField(Tag)
 
     class Meta:
-        ordering = ["-readiness"]
+        ordering = ["readiness"]
 
     def __str__(self):
         return f"{self.content} {self.readiness}"
