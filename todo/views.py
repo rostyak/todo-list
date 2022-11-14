@@ -25,7 +25,7 @@ class IndexUpdateView(generic.UpdateView):
 
 class IndexDeleteView(generic.DeleteView):
     model = Task
-    success_url = "todo/index.html"
+    success_url = reverse_lazy("todo:index")
 
 
 class TagListView(generic.ListView):
