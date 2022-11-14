@@ -13,7 +13,7 @@
 
     {% for task in task_list %}
       <h4>
-        {{ task.content }}
+        *{{ task.content }}
         {% if task.readiness %}
           <p style="color: green">Done</p>
         {% else %}
