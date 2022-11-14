@@ -15,5 +15,8 @@ class Task(models.Model):
     readiness = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag)
 
+    class Meta:
+        ordering = ["-readiness"]
+
     def __str__(self):
         return f"{self.content} {self.readiness}"
