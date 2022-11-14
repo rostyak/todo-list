@@ -2,6 +2,7 @@ from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
+from todo.forms import IndexForm
 from todo.models import Tag, Task
 
 
@@ -13,14 +14,14 @@ class IndexListView(generic.ListView):
 
 class IndexCreateView(generic.CreateView):
     model = Task
-    fields = "__all__"
     success_url = reverse_lazy("todo:index")
+    form_class = IndexForm
 
 
 class IndexUpdateView(generic.UpdateView):
     model = Task
-    fields = "__all__"
     success_url = reverse_lazy("todo:index")
+    form_class = IndexForm
 
 
 class IndexDeleteView(generic.DeleteView):
